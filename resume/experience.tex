@@ -3,12 +3,15 @@
 \begin{cventries}
   \cventry
     {Software Engineer} % Job title
-    {Facebook} % Organization
+    {Meta - WhatsApp} % Organization
     {Menlo Park, CA} % Location
-    {July 2019 - PRESENT} % Date(s)
+    {Jul 2019 - Present} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {placeholder}
+        \item{Led development of new privacy settings by working with multiple cross-functional teams to give users more granular privacy controls. A/B tests saw increased privacy setting adoption (5\% on Android, 11\% on iOS) and increased usage of related features.}
+        \item{Identified and implemented reliability improvements for a core service by working with client teams to reduce congestion and prioritize critical requests during system failure and recovery. Dampened spikes of 500k+ (50\%+) QPS, with better availability for revenue generating use cases.}
+        \item{Prioritized and drove early adoption of multiple org-wide initiatives for a team of 5, including adding type specs to enable static analysis, and migrating to a new test framework which reduced test runtimes by over 90\% (e.g. 60+ min to 5 min).}
+        \item{Designed and implemented support for non-WhatsApp users to be in WhatsApp groups, unblocking a cross-org project to allow migrating Messenger and Instagram groups to WhatsApp infrastructure.}
       \end{cvitems}
     }
 
@@ -16,10 +19,10 @@
     {Software Engineer Intern (Part Time)} % Job title
     {Toast} % Organization
     {Boston, MA} % Location
-    {Feb. 2019 - June 2019} % Date(s)
+    {Feb 2019 - Apr 2019} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built the infrastructure and automation pipeline for Android's Espresso test framework, enabling developers to use Espresso for UI tests instead of the current, significantly slower, custom Appium-based framework. Used Jenkins, AWS EC2, and Genymotion Cloud for scalability.}
+        \item {Created and integrated with an automation pipeline for Android Espresso tests, enabling developers to move away from a significantly slower Appium-based framework.}
       \end{cvitems}
     }
 
@@ -27,22 +30,22 @@
     {Software Engineer Intern} % Job title
     {Drizly} % Organization
     {Boston, MA} % Location
-    {May. 2018 - Aug. 2018} % Date(s)
+    {May 2018 - Aug 2018} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Implemented a re-designed onboarding workflow with automated Salesforce integration for new customers to streamline the onboarding process for both customers and account managers.}
+        \item {Implemented a re-designed onboarding flow with automated Salesforce integration, improving the experience for new retail customers and account managers using Ruby on Rails.}
       \end{cvitems}
     }
 
   \cventry
     {Software Engineer Intern} % Job title
-    {Facebook} % Organization
+    {Meta - Instagram} % Organization
     {Menlo Park, CA} % Location
-    {Jan. 2018 - Apr. 2018} % Date(s)
+    {Jan 2018 - Apr 2018} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Helped migrate the Instagram Django web server to perform parallel IO operations and handle concurrent requests within each worker process to reduce latency and increase capacity as the app scales with users and features.}
-		\item {Created a framework to safely predict the performance and correctness of worker processes handling concurrent requests from a production environment. Preemptively caught and fixed regressions related to increased cpu instructions, caching, and global state contamination.}
+        \item {Built a traffic replay system to predict the performance and correctness of concurrent I/O processing during the migration to Python's asyncio library. Preemptively detected and fixed multiple regressions related to caching and global state contamination.}
+        \item {Migrated various APIs to enable concurrent I/O within a single thread with Python asyncio, improving API latency by up to 30\%.}
       \end{cvitems}
     }
 
@@ -50,16 +53,16 @@
     {Software Engineer Intern} % Job title
     {Toast} % Organization
     {Boston, MA} % Location
-    {Jan. 2017 - Aug. 2017} % Date(s)
+    {Jan 2017 - Aug 2017} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Built a microservice, database schema, and related web pages to manage customer accounts --- 50,000+ created within the first two months.}
-		\item {Designed and helped implement a second microservice to build the foundation for upcoming payment features and reduce technical debt.}
-		\item {Enhanced the audit tool to query real-time data from restaurants' Android devices, proactively resolving customers' configuration bugs.}
+        \item {Built a Java microservice, database schema, and related web pages to manage customer accounts --- 50,000+ created in the first two months.}
+        \item {Designed and implemented  a second microservice to support upcoming payment features during online ordering.}
+        \item {Enhanced internal tooling to query real-time data from client devices to help customer support resolve configuration issues.}
       \end{cvitems}
     }
 
-  \cventry
+    \cventry
     {Programming Mentor, TA} % Job title
     {CSTUY Hacking Sessions} % Organization
     {New York, NY} % Location
@@ -68,5 +71,5 @@
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Taught programming concepts to high school students using Java and Processing while providing input for lesson plans and project ideas.}
       \end{cvitems}
-    }    
+    }
 \end{cventries}
