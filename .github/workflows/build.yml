@@ -32,10 +32,14 @@ jobs:
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
+      - name: Move output to deploy directory
+        run: |
+          mkdir deploy
+          mv cv.pdf deploy/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./cv.pdf
+          path: ./deploy
   deploy:
     environment:
       name: github-pages
