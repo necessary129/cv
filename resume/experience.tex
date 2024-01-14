@@ -1,20 +1,34 @@
 \cvsection{Experience}
 
 \begin{cventries}
-  \cventry
-    {Student Sysadmin} % Job title
-    {IIIT Hyderabad} % Organization
+	\cventry
+	  {Student Sysadmin} % Job title
+	  {IIIT Hyderabad} % Organization
+	  {} % Location
+	  {2022 - Present} % Date(s)
+	  {
+		\begin{cvitems} % Description(s) of tasks/responsibilities
+		  \item {Moved the outdated Virtuozzo based containers and virt-manager based VMs to Proxmox VE, enabling easy management of the entire infrastructure}
+		  \item {Moved old Squid + Iptables based Firewall to PfSense}
+		  \item {Implemented a complete logging + IDS solution for Campus wide network using PfSense + Elasticsearch}
+		  \item {Implemented a modern backup solution using BorgBackup and Borgmatic}
+		  \item {Designed and deployed a new framework for lab exams with high security features like restricted inter device communication, restricted LAN access, disabled USB devices, kernel based auditing, etc. which was used for DSA and CSO courses}
+		  \item {Designed and deployed highly available multimaster LDAP replication with load balancing instead of the outdated single master setup}
+		\end{cvitems}
+	  }
+	\cventry
+    {Research Intern on \href{https://github.com/IITH-Compilers/IR2Vec}{IR2Vec}} % Job title
+    {IIT Hyderabad} % Organization
     {} % Location
-    {2022 - Present} % Date(s)
+    {2023 - 2023} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Moved the outdated Virtuozzo based containers and virt-manager based VMs to Proxmox VE, enabling easy management of the entire infrastructure}
-        \item {Moved old Squid + Iptables based Firewall to PfSense}
-        \item {Implemented a complete logging + IDS solution for Campus wide network using PfSense + Elasticsearch}
-        \item {Implemented a modern backup solution using BorgBackup and Borgmatic}
-        \item {Designed and deployed a new framework for lab exams with high security features like restricted inter device communication, restricted LAN access, disabled USB devices, kernel based auditing, etc. which was used for DSA and CSO courses}
+        \item {Made an automated python packaging workflow for the IR2Vec library}
+        \item {Reduced the python wheel size from ~60MB to ~5MB while increasing the compatibility of the wheels to musl based OSes and older linux distros}
+        \item {Created a fully dockerized dev/building environment with latest LLVM but older glibc to facilitate compatibility}
       \end{cvitems}
     }
+
 
   \cventry
     {Devops Intern} % Job title
