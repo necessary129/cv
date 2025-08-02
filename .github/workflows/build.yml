@@ -23,14 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/checkout@v4
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
@@ -41,7 +37,8 @@ jobs:
           mv cv.pdf deploy/
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./deploy
 
@@ -54,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
