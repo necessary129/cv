@@ -2,72 +2,71 @@
 
 \begin{cventries}
 
-	\cventry
-	  {Student Sysadmin} % Job title
-	  {IIIT Hyderabad} % Organization
-	  {Hyderabad, India} % Location
-	  {2022 - Present} % Date(s)
-	  {
-		\begin{cvitems} % Description(s) of tasks/responsibilities
-		  \item {Setup Deep Packet Inspection and Flow based monitoring for the entire campus network using ntopng + Elasticsearch, which was used to identify and mitigate various security threats and bandwidth hogs}
-		  \item {Moved the outdated Virtuozzo based containers and virt-manager based VMs to Proxmox VE, enabling easy management of the entire infrastructure}
-		  \item {Moved old Squid + Iptables based Firewall to PfSense}
-		  \item {Implemented a complete logging + IDS solution for Campus wide network using PfSense + Elasticsearch}
-		  \item {Implemented a modern backup solution using BorgBackup and Borgmatic}
-		  \item {Designed and deployed a new framework for lab exams with high security features like restricted inter device communication, restricted LAN access, disabled USB devices, kernel based auditing, etc. which was used for DSA and CSO courses}
-		  \item {Designed and deployed highly available multimaster LDAP replication with load balancing instead of the outdated single master setup}
-		\end{cvitems}
-	  }
+  \cventry
+    {Student System Administrator} % Job title
+    {IIIT Hyderabad} % Organization
+    {Hyderabad, India} % Location
+    {2022 - Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Deployed deep packet inspection and flow-based monitoring experimentally across the entire campus network with ntopng and Elasticsearch, surfacing security threats and bandwidth abuse for rapid mitigation}
+        \item {Migrated legacy Virtuozzo containers and virt-manager VMs to Proxmox VE, unifying management of the campus virtualization infrastructure}
+        \item {Replaced the aging Squid + iptables firewall with pfSense and built a campus-wide logging and intrusion-detection stack on pfSense + Elasticsearch}
+        \item {Implemented a modern, deduplicated backup solution using BorgBackup and Borgmatic}
+        \item {Designed and deployed (via Ansible) a hardened lab-exam framework with restricted inter-device communication, locked-down LAN access, disabled USB storage, and kernel-level auditing; adopted for the DSA and CSO courses}
+        \item {Replaced the single-master LDAP setup with a highly available multi-master LDAP replication cluster behind a load balancer}
+      \end{cvitems}
+    }
 
   \cventry
-    {Software Development Enginner Intern} % Job title
+    {Software Development Engineer Intern} % Job title
     {Motorq Labs Private Limited} % Organization
     {Chennai, India} % Location
     {May 2025 - July 2025} % Date(s)
     {
-    \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item {Optimized the Geofence service by optimizing Postgres, Node.js code, design of the service, and Kubernetes architecture, allowing a 5268x increase in computational capacity at the same cost}
-      \item {Designed and implemented an Apache Pulsar Sink to Azure Blob Storage (Using Java and Project Reactor), which is 500x less resource intensive than the available alternatives from StreamNative etc.}
-      \item {Evaluated and deployed VictoriaLogs+Vector as a replacement for the existing ELK stack, bringing down ingestion latency at peak load from 4 hours to <1 second.}
-    \end{cvitems}
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Optimized the Geofence service across PostgreSQL, Node.js, service design, and Kubernetes architecture, increasing computational throughput 5268x at the same cost}
+        \item {Designed and built an Apache Pulsar sink to Azure Blob Storage in Java with Project Reactor, using 500x fewer resources than the available StreamNative alternatives}
+        \item {Evaluated and deployed VictoriaLogs + Vector to replace the ELK stack, cutting peak-load ingestion latency from 4 hours to under 1 second}
+      \end{cvitems}
     }
 
   \cventry
     {Research Intern on \href{https://github.com/IITH-Compilers/IR2Vec}{IR2Vec}} % Job title
     {Scalable Compilers for Heterogeneous Architectures Group, IIT Hyderabad} % Organization
     {Hyderabad, India} % Location
-    {2023 - 2023} % Date(s)
+    {2023} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Made an automated python packaging workflow for the IR2Vec library}
-        \item {Reduced the python wheel size from ~60MB to ~5MB while increasing the compatibility of the wheels to musl based OSes and older linux distros}
-        \item {Created a fully dockerized dev/building environment with latest LLVM but older glibc to facilitate compatibility}
+        \item {Built an automated Python packaging workflow for the IR2Vec library}
+        \item {Shrank the Python wheel from ~60MB to ~5MB while extending compatibility to musl-based and older glibc Linux distributions}
+        \item {Created a fully Dockerized build environment pairing the latest LLVM with an older glibc to maximize binary compatibility}
       \end{cvitems}
     }
 
   \cventry
-    {Devops Intern} % Job title
+    {DevOps Intern} % Job title
     {\href{https://blend-ed.org/}{BlendEd Edtech}} % Organization
     {Kozhikode, India} % Location
     {2021} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Moved traditional Docker compose based deployment to Kubernetes, enabling easy scaling and monitoring of applications}
+        \item {Migrated a Docker Compose deployment to Kubernetes, enabling straightforward scaling and monitoring of applications}
         \item {Deployed ClickHouse for analytics and reporting}
       \end{cvitems}
     }
 
-    \cventry
-    {Volunteer Sysadmin} % Job title
+  \cventry
+    {Volunteer System Administrator} % Job title
     {\href{https://fsci.in}{Free Software Community of India (FSCI)}} % Organization
     {} % Location
     {2018 - 2020} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Maintained \href{https://poddery.com}{Poddery.com}, A federated facebook alternative used by ~500 monthly active users}
-        \item {Setup and maintained a Matrix.org homeserver for FSCI, writing a custom authenticator plugin to let users authenticate against Poddery}
-        \item {Setup monitoring and alerting for the various FSCI services using Prometheus and Grafana}
-        \item {Setup a VPN solution for secure cross-service communication using Tinc}
+        \item {Maintained \href{https://poddery.com}{Poddery.com}, a federated Facebook alternative serving ~500 monthly active users}
+        \item {Set up and maintained a Matrix.org homeserver, writing a custom authenticator plugin so users could sign in with their Poddery credentials}
+        \item {Set up monitoring and alerting for FSCI services using Prometheus and Grafana}
+        \item {Built a VPN mesh for secure cross-service communication using tinc}
       \end{cvitems}
     }
 \end{cventries}

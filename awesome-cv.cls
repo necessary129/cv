@@ -345,6 +345,9 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% Top-aligned variant for entry descriptions, so a single bullet sits directly
+% under the subtitle instead of being vertically centred in the cell
+\newcolumntype{D}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 % Use to draw horizontal line with specific thickness
 \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
@@ -533,12 +536,12 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#1#3#4}
       {\entrytitlestyle{#2} \\
-        \multicolumn{1}{L{\textwidth}}{\descriptionstyle{#5}}}
+        \multicolumn{1}{D{\textwidth}}{\descriptionstyle{#5}}}
       {\ifempty{#2#3}
           {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
           {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
             \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-        \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+        \multicolumn{2}{D{\textwidth}}{\descriptionstyle{#5}}}
   \end{tabular*}%
 }
 

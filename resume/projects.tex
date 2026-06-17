@@ -1,93 +1,103 @@
 \cvsection{Projects}
 
 \begin{cventries}
-    
-    \cventry
-    {A compiler for a subset of Typed Racket} % Empty position
+
+  \cventry
+    {A compiler for a subset of Typed Racket} % Description
     {\href{https://github.com/necessary129/diesun}{Racket Compiler}} % Project
-    {} % Empty location
-    {} % Empty date
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Built as part of the Compilers course}
-        \item {Supports functions, conditionals, loops, tuples, garbage collection, etc.}
-        \item {Has optimizations like constant folding, partial evaluation, dead code elimination, etc.}
-        \item {Wrote a multiprocess fuzzer which found errors in the book and the reference implementation}
+        \item {Built for the Compilers course; supports functions, conditionals, loops, tuples, and garbage collection}
+        \item {Implements optimizations including constant folding, partial evaluation, and dead-code elimination}
+        \item {Wrote a multiprocess fuzzer that uncovered bugs in both the course textbook and its reference implementation}
       \end{cvitems}
     }
 
-    \cventry
-    {A pseudo shell written in C} % Empty position
-    {\href{https://github.com/necessary129/nsh}{NSH: A posix-like shell}} % Project
-    {} % Empty location
-    {} % Empty date
+  \cventry
+    {Extended the MIT xv6 RISC-V teaching kernel in C} % Description
+    {\href{https://github.com/necessary129/osn-xv6}{xv6 Kernel Extensions}} % Project
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-          \item {A minimal POSIX shell with full process management, piping, job control and signalling support}
-          \item {Used valgrind to ensure memory safety}
+        \item {Added \texttt{strace}, \texttt{sigalarm}/\texttt{sigreturn}, and \texttt{waitx} system calls, with a fork-inherited syscall trace bitmask and timer-driven user-space signal handlers}
+        \item {Implemented four build-selectable schedulers: FCFS, a lottery scheduler, a priority-based scheduler (PBS), and a 5-level Multi-Level Feedback Queue with aging and preemption}
+        \item {Implemented Copy-On-Write fork using reference-counted physical pages and page-fault-driven lazy copying}
       \end{cvitems}
     }
 
-    \cventry
-    {An OIDC (OAuth 2.0) provider that uses Discourse as the identity backend} % Empty position
+  \cventry
+    {A POSIX-like shell written in C} % Description
+    {\href{https://github.com/necessary129/nsh}{NSH}} % Project
+    {} % Location
+    {} % Date
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {A minimal POSIX-like shell with full process management, piping, job control, and signal handling}
+        \item {Verified memory safety with Valgrind}
+      \end{cvitems}
+    }
+
+  \cventry
+    {An OIDC (OAuth 2.0) provider backed by Discourse as the identity store} % Description
     {\href{https://github.com/necessary129/distrust}{Distrust}} % Project
-    {} % Empty location
-    {} % Empty date
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Written in Go, built on top of \href{https://github.com/ory/fosite}{ory/fosite} for OAuth 2.0 / OpenID Connect}
-        \item {Allows any OIDC-compatible application to authenticate users against a Discourse forum}
-        \item {Supports group-based ACLs to allow or deny access to clients based on Discourse group membership}
+        \item {Written in Go on top of \href{https://github.com/ory/fosite}{ory/fosite} for OAuth 2.0 / OpenID Connect}
+        \item {Lets any OIDC-compatible application authenticate users against a Discourse forum}
+        \item {Supports group-based ACLs to grant or deny client access by Discourse group membership}
       \end{cvitems}
     }
-    
-    \cventry
-    {A RAG based Chat bot for answering medical questions} % Empty position
+
+  \cventry
+    {A RAG-based chatbot for answering medical questions} % Description
     {Medical Chat Bot} % Project
-    {} % Empty location
-    {} % Empty date
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Built as part of a hackathon hosted by ECell Hyderabad}
-        \item {Did RAG on the given gataset to answer source supported medical questions}
-        \item {Used llama.cpp, llm multitool etc to run the model locally, ensuring privacy}
-        \item {Demonstrated the model even on the edge, using a Google Pixel 7}
+        \item {Built at a hackathon hosted by E-Cell, IIIT Hyderabad}
+        \item {Used retrieval-augmented generation over the provided dataset to answer medical questions with cited sources}
+        \item {Ran models locally with llama.cpp to preserve privacy, demonstrating on-device inference on a Google Pixel 7}
       \end{cvitems}
     }
-    
-    \cventry
-    {A borg + borgmatic binary that works on any Linux distribution without any dependencies.} % Empty position
+
+  \cventry
+    {A dependency-free Borg + Borgmatic binary for any Linux distribution} % Description
     {\href{https://github.com/necessary129/the-universal-borgmatic}{Universal Backup}} % Project
-    {} % Empty location
-    {} % Empty date
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Runs on any linux distribution that has GNU libc 2.12 or later, ie any distribution released after 2011}
+        \item {Runs on any Linux distribution with GNU libc 2.12 or later, i.e. anything released since 2011, with no external dependencies}
       \end{cvitems}
     }
-    
-    \cventry
-    {A quality of life Minecraft Mod} % Empty position
-    {\href{https://www.curseforge.com/minecraft/mc-mods/auto-torch}{AutoTorch: Minecraft Mod}} % Project
-    {} % Empty location
-    {} % Empty date
+
+  \cventry
+    {A quality-of-life Minecraft mod} % Description
+    {\href{https://www.curseforge.com/minecraft/mc-mods/auto-torch}{AutoTorch}} % Project
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
         \item {Automatically places torches in the player's hand when the player is in a dark area}
         \item {Has over 12000 downloads on \href{https://www.curseforge.com/minecraft/mc-mods/auto-torch}{CurseForge}}
     \end{cvitems}
     }
-    
-    \cventry
-    {Allows Matrix.org Homeservers to authenticate users using their Diaspora credentials} % Empty position
+
+  \cventry
+    {Authenticates Matrix.org homeservers against Diaspora credentials} % Description
     {\href{https://matrix.org/docs/projects/other/synapse-diaspora-auth}{Synapse Diaspora Authenticator}} % Project
-    {} % Empty location
-    {} % Empty date
+    {} % Location
+    {} % Date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Used by Poddery.com to centralize authentication}
-        \item {Also made numerous contributions to Matrix.org including developing and deploying a critical security fix on the live network.\
-         \href{https://matrix.org/blog/2018/05/01/security-update-synapse-0-28-1/}{Credited here as Po Shamil}}
+        \item {Used by Poddery.com to centralize authentication across services}
+        \item {Contributed to Matrix.org, including developing and deploying a critical security fix on the live network (\href{https://matrix.org/blog/2018/05/01/security-update-synapse-0-28-1/}{credited as Po Shamil})}
       \end{cvitems}
     }
 \end{cventries}
