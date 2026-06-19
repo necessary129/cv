@@ -1,53 +1,57 @@
-name: Build LaTeX document
+name: Build and deploy CV
+
 on:
   push:
+    branches: [master]
     paths-ignore:
       - ".gitignore"
       - "LICENSE"
       - "README.md"
-    branches:
-      - master
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Allow only one concurrent deployment. Do NOT cancel in-progress runs, so a
+# production deployment is always allowed to finish.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  build_latex:
+  build:
+    name: Compile LaTeX
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v5
 
-      - name: Compile LaTeX document
+      - name: Compile cv.tex
         uses: xu-cheng/latex-action@v4
         with:
           root_file: cv.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
 
-      - name: Move output to deploy directory
-        run: |
-          mv cv.pdf deploy/
+      - name: Stage PDF for deployment
+        run: mv cv.pdf deploy/
 
-      - name: Upload artifact
-        id: deployment
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./deploy
 
   deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build_latex
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
