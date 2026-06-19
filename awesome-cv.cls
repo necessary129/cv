@@ -523,6 +523,8 @@
 % Define an environment for cventry
 \newenvironment{cventries}{%
   \vspace{\acvSectionContentTopSkip}
+  \setlength{\topsep}{0pt}%
+  \setlength{\partopsep}{0pt}%
   \begin{center}
 }{%
   \end{center}
@@ -590,11 +592,13 @@
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
+  \vspace{2.0mm}
+  \setlength{\topsep}{0pt}%
+  \setlength{\partopsep}{0pt}%
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l L{\textwidth * \real{0.8}}}
 }{%
     \end{tabular*}
   \end{center}

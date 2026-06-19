@@ -25,8 +25,8 @@
     {May 2025 - July 2025} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Optimized the Geofence service across PostgreSQL, Node.js, service design, and Kubernetes architecture, increasing computational throughput 5268x at the same cost}
-        \item {Designed and built an Apache Pulsar sink to Azure Blob Storage in Java with Project Reactor, using 500x fewer resources than the available StreamNative alternatives}
+        \item {Took the Geofence service from roughly 20 requests/sec to 100,000 requests/sec at the same cost by reworking its PostgreSQL query patterns, Node.js hot paths, service design, and Kubernetes topology}
+        \item {Designed and built an Apache Pulsar sink to Azure Blob Storage in Java with Project Reactor, sustaining 500,000 messages/sec on 8GB of RAM (versus 1,000 for the available StreamNative connector) and handling multiple topics the connector could not}
         \item {Evaluated and deployed VictoriaLogs + Vector to replace the ELK stack, cutting peak-load ingestion latency from 4 hours to under 1 second}
       \end{cvitems}
     }
@@ -39,7 +39,7 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
         \item {Built an automated Python packaging workflow for the IR2Vec library}
-        \item {Shrank the Python wheel from ~60MB to ~5MB while extending compatibility to musl-based and older glibc Linux distributions}
+        \item {Shrank the Python wheel from $\sim$60MB to $\sim$5MB while extending compatibility to musl-based and older glibc Linux distributions}
         \item {Created a fully Dockerized build environment pairing the latest LLVM with an older glibc to maximize binary compatibility}
       \end{cvitems}
     }
@@ -63,7 +63,7 @@
     {2018 - 2020} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Maintained \href{https://poddery.com}{Poddery.com}, a federated Facebook alternative serving ~500 monthly active users}
+        \item {Maintained \href{https://poddery.com}{Poddery.com}, a federated Facebook alternative serving $\sim$500 monthly active users}
         \item {Set up and maintained a Matrix.org homeserver, writing a custom authenticator plugin so users could sign in with their Poddery credentials}
         \item {Set up monitoring and alerting for FSCI services using Prometheus and Grafana}
         \item {Built a VPN mesh for secure cross-service communication using tinc}

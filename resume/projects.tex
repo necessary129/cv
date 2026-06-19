@@ -3,19 +3,6 @@
 \begin{cventries}
 
   \cventry
-    {A compiler for a subset of Typed Racket} % Description
-    {\href{https://github.com/necessary129/diesun}{Racket Compiler}} % Project
-    {} % Location
-    {} % Date
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Built for the Compilers course; supports functions, conditionals, loops, tuples, and garbage collection}
-        \item {Implements optimizations including constant folding, partial evaluation, and dead-code elimination}
-        \item {Wrote a multiprocess fuzzer that uncovered bugs in both the course textbook and its reference implementation}
-      \end{cvitems}
-    }
-
-  \cventry
     {Extended the MIT xv6 RISC-V teaching kernel in C} % Description
     {\href{https://github.com/necessary129/osn-xv6}{xv6 Kernel Extensions}} % Project
     {} % Location
@@ -37,6 +24,32 @@
       \begin{cvitems} % Description(s) bullet points
         \item {A minimal POSIX-like shell with full process management, piping, job control, and signal handling}
         \item {Verified memory safety with Valgrind}
+      \end{cvitems}
+    }
+
+  \cventry
+    {An IRC client protocol library in Python} % Description
+    {\href{https://github.com/necessary129/nIRC}{nIRC}} % Project
+    {} % Location
+    {} % Date
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Implemented the IRC client wire protocol over a TLS socket with \texttt{asyncio}, handling raw byte-stream buffering and line framing}
+        \item {Added IRCv3 capability negotiation with SASL PLAIN authentication and a token-bucket rate limiter for flood protection}
+        \item {Built a pluggable hook-based event dispatcher with automatic reconnection}
+      \end{cvitems}
+    }
+
+  \cventry
+    {A compiler for a subset of Typed Racket} % Description
+    {\href{https://github.com/necessary129/diesun}{Racket Compiler}} % Project
+    {} % Location
+    {} % Date
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Built for the Compilers course; supports functions, conditionals, loops, tuples, and garbage collection}
+        \item {Implements optimizations including constant folding, partial evaluation, and dead-code elimination}
+        \item {Wrote a multiprocess fuzzer that uncovered bugs in both the course textbook and its reference implementation}
       \end{cvitems}
     }
 
@@ -97,7 +110,6 @@
     {
       \begin{cvitems} % Description(s) bullet points
         \item {Used by Poddery.com to centralize authentication across services}
-        \item {Contributed to Matrix.org, including developing and deploying a critical security fix on the live network (\href{https://matrix.org/blog/2018/05/01/security-update-synapse-0-28-1/}{credited as Po Shamil})}
       \end{cvitems}
     }
 \end{cventries}
